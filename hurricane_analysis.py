@@ -7,7 +7,7 @@
 
 # Imports:
 
-# In[516]:
+# In[ ]:
 
 import requests
 import json
@@ -71,7 +71,7 @@ while page<1:
 # ## Hurricane Bigrams
 # After copying and pasting the above into Excel Workbook, tokenize and analyze for bigrams:
 
-# In[862]:
+# In[ ]:
 
 harveydf=pd.read_excel('/Users/anna/Desktop/PRISMOJI/Hurricane_Headlines.xlsx', 
                      sheetname="Harvey")
@@ -110,7 +110,7 @@ plt.show()
 
 # Repeat for Irma:
 
-# In[877]:
+# In[ ]:
 
 irmadf=pd.read_excel('/Users/anna/Desktop/PRISMOJI/Hurricane_Headlines.xlsx', 
                      sheetname="Irma")
@@ -139,7 +139,7 @@ plt.show()
 
 # Jose has much less data, so a bar chart isn't necessarily useful:
 
-# In[782]:
+# In[ ]:
 
 josedf=pd.read_excel('/Users/anna/Desktop/PRISMOJI/Hurricane_Headlines.xlsx', 
                      sheetname="Jose")
@@ -166,7 +166,7 @@ plt.show()
 
 # Non-Interactive Chart of Hurricane Bigrams:
 
-# In[852]:
+# In[ ]:
 
 stormverbs=pd.concat([hcounts,icounts,jcounts], axis=0)[:100] #all storms and their bigrams
 stormverbs=stormverbs.dropna()
@@ -181,7 +181,7 @@ plt.show()
 
 # Interactive version with Plotly:
 
-# In[839]:
+# In[ ]:
 
 import plotly.plotly as py
 import plotly
@@ -194,7 +194,7 @@ HTML(filename='/Users/anna/Desktop/PRISMOJI/hurricanes.html')
 
 # Word Cloud of all words in headlines:
 
-# In[866]:
+# In[ ]:
 
 heads=harvey+irma+jose 
 for word in stops:
@@ -218,7 +218,7 @@ plt.show()
 
 # Part of Speech Analysis:
 
-# In[853]:
+# In[ ]:
 
 harveydf=pd.read_excel('/Users/anna/Desktop/PRISMOJI/Hurricane_Headlines.xlsx', 
                      sheetname="Harvey")
